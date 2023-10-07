@@ -1,0 +1,32 @@
+一、安装git
+    1. 配置全局的git用户名和电子邮件地址
+        git config --global user.name ""
+        git config --global user.email ""
+
+二、创建版本库
+    1.
+        git init
+
+    2.
+        git add <filename>
+        git commit -m "brief"
+
+三、版本管理
+    1.查看当前工作区状态
+        git status
+
+    2.查看文件修改内容（文本）
+        git diff <filename>
+
+    3.查看提交历史
+        git log --pretty=oneline
+
+    4.
+        git reset --hard HEAD^
+        git reset --hard 1094a  1094a为回滚的版本号
+
+    5.撤销修改
+        git checkout -- <file>          丢弃工作区的修改
+                                        [将文件回退到最近一次git add 或 git commit 时的状态]
+
+        git reset HEAD <file>           取消file添加到暂存区
